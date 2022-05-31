@@ -13,7 +13,14 @@
               ngModel
               name="username"
               required
+              #formUsernameRef="ngModel"
             />
+            <span
+              class="help-block"
+              *ngIf="formUsernameRef.invalid && formUsernameRef.touched"
+            >
+              Enter a valid name
+            </span>
           </div>
           <button class="btn btn-default" type="button">
             Suggest an Username
@@ -28,7 +35,14 @@
               name="email"
               required
               email
+              #formEmailRef="ngModel"
             />
+            <span
+              class="help-block"
+              *ngIf="formEmailRef.invalid && formEmailRef.touched"
+            >
+              Enter a valid email
+            </span>
           </div>
         </div>
         <div class="form-group">
