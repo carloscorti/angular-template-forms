@@ -9,6 +9,9 @@ import { NgForm } from '@angular/forms';
 export class AppComponent {
   @ViewChild('formRef') signUpForm!: NgForm;
   title = 'angular-forms';
+  defaulfUsernameValue = 'Enter your User Name';
+  defaulfEmailValue = 'enter-your@email.here';
+  defaulfSelectValue = 'pet';
 
   onSubmit() {
     console.log('form', this.signUpForm);

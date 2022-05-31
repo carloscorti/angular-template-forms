@@ -10,7 +10,7 @@
               type="text"
               id="username"
               class="form-control"
-              ngModel
+              [ngModel]="defaulfUsernameValue"
               name="username"
               required
               #formUsernameRef="ngModel"
@@ -31,7 +31,7 @@
               type="email"
               id="email"
               class="form-control"
-              ngModel
+              [ngModel]="defaulfEmailValue"
               name="email"
               required
               email
@@ -47,7 +47,12 @@
         </div>
         <div class="form-group">
           <label for="secret">Secret Questions</label>
-          <select id="secret" class="form-control" ngModel name="secret">
+          <select
+            id="secret"
+            class="form-control"
+            [ngModel]="defaulfSelectValue"
+            name="secret"
+          >
             <option value="pet">Your first Pet?</option>
             <option value="teacher">Your first teacher?</option>
           </select>
@@ -55,7 +60,9 @@
         <button
           class="btn btn-primary"
           type="submit"
-          [disabled]="!formRef.valid"
+          [disabled]="
+            formRef.invalid || formEmailRef.pristine || formUsernameRef.pristine
+          "
         >
           Submit
         </button>
