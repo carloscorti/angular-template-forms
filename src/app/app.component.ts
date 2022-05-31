@@ -15,6 +15,14 @@ export class AppComponent {
   colorsRadio = ['blue', 'red'];
   defaulfColorsRadioChecked = 'blue';
 
+  onSuggestUserNameClick() {
+    this.signUpForm.form.patchValue({
+      userDataInputs: {
+        username: 'Suggested name',
+      },
+    });
+  }
+
   onSubmit() {
     console.log('form', this.signUpForm);
   }
