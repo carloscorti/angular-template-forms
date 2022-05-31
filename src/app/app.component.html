@@ -70,11 +70,33 @@
             <option value="teacher">Your first teacher?</option>
           </select>
         </div>
+        <div
+          id="color-radio-buttons"
+          ngModelGroup="colorRadioButtons"
+          #formRadioButtonsRef="ngModelGroup"
+        >
+          <div class="radio" *ngFor="let color of colorsRadio; index as index">
+            <label for="radio-button-{{ color }}">
+              <input
+                id="radio-button-{{ color }}"
+                type="radio"
+                name="color"
+                [value]="color"
+                ngModel
+                required
+              />
+              {{ color }}</label
+            >
+          </div>
+        </div>
         <button
           class="btn btn-primary"
           type="submit"
           [disabled]="
-            formRef.invalid || formEmailRef.pristine || formUsernameRef.pristine
+            formRef.invalid ||
+            formEmailRef.pristine ||
+            formUsernameRef.pristine ||
+            formRadioButtonsRef.pristine
           "
         >
           Submit

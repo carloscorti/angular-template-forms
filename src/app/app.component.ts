@@ -12,6 +12,7 @@ export class AppComponent {
   defaulfUsernameValue = 'Enter your User Name';
   defaulfEmailValue = 'enter-your@email.here';
   defaulfSelectValue = 'pet';
+  colorsRadio = ['blue', 'red'];
 
   onSubmit() {
     console.log('form', this.signUpForm);
