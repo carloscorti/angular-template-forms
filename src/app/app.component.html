@@ -110,6 +110,15 @@
           Submit
         </button>
       </form>
+      <div class="row" *ngIf="submitted">
+        <div class="col-xs-12">
+          <h3>Your Data</h3>
+          <p>UserName= {{ selectedUsernameValue }}</p>
+          <p>email= {{ selectedEmailValue }}</p>
+          <p>Secret= {{ selectedSecretValue }}</p>
+          <p>Color= {{ selectedColorsRadioChecked }}</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
