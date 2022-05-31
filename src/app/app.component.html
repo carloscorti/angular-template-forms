@@ -82,7 +82,7 @@
                 type="radio"
                 name="color"
                 [value]="color"
-                ngModel
+                [(ngModel)]="defaulfColorsRadioChecked"
                 required
               />
               {{ color }}</label
@@ -93,10 +93,7 @@
           class="btn btn-primary"
           type="submit"
           [disabled]="
-            formRef.invalid ||
-            formEmailRef.pristine ||
-            formUsernameRef.pristine ||
-            formRadioButtonsRef.pristine
+            formRef.invalid || formEmailRef.pristine || formUsernameRef.pristine
           "
         >
           Submit
