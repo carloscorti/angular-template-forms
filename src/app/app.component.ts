@@ -63,6 +63,7 @@ export class AppComponent {
     this.selectedColorsRadioChecked =
       this.signUpForm.value.colorRadioButtons.color;
     this.submitted = true;
+    this.signUpForm.reset();
     console.log('form', this.signUpForm);
   }
 }
