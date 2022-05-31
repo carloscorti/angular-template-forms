@@ -23,6 +23,19 @@ export class AppComponent {
     });
   }
 
+  setCompeteFormFieldsValues() {
+    this.signUpForm.setValue({
+      colorRadioButtons: {
+        color: 'red',
+      },
+      secret: 'teacher',
+      userDataInputs: {
+        email: 'new-email@value.set',
+        username: 'Other suggested name',
+      },
+    });
+  }
+
   onSubmit() {
     console.log('form', this.signUpForm);
   }
